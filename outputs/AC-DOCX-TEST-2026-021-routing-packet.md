@@ -1,7 +1,7 @@
 # Routing Packet — AC-DOCX-TEST-2026-021
 
 Generated: 2026-06-08
-Source processed via: `tools/document-to-markdown.md` → `reference/intake-form-template.md`
+Source processed via: `reference/intake-form-template.md`
 
 ---
 
@@ -44,7 +44,7 @@ CONFIDENCE REASON:
 Injury trigger clearly supports the complex unit route — BI alone is sufficient to route here regardless of other facts. Confidence is Medium rather than High because three non-blocking intake gaps are noted in the file: police report status unknown, witness contact information incomplete, and loss location is general rather than specific. These are follow-up tasks, not routing blockers, but they confirm this is not a fully clean intake.
 
 SOURCE DOCUMENTS REVIEWED:
-- Mixed claim notes packet — AC-DOCX-TEST-2026-021 — converted to Markdown via document-to-markdown utility; extracted claim facts, parties, injury claim, and investigation status; liability dispute and missing police report confirmed in notes
+- Mixed claim notes packet — AC-DOCX-TEST-2026-021 — extracted claim facts, parties, injury claim, and investigation status; liability dispute and missing police report confirmed in notes
 
 MISSING INFORMATION:
 - Police report: noted as not received / status unknown — adjuster to request or confirm disposition

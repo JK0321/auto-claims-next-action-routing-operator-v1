@@ -7,7 +7,7 @@ Auto Claim Material
 │
 ├── 1. Intake Preparation
 │   ├── Clean raw claim facts
-│   ├── Convert PDF / DOCX / notes if needed
+│   ├── Summarize and extract facts from source documents if needed
 │   ├── Identify missing information
 │   └── Identify contradictions
 │

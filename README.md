@@ -232,7 +232,7 @@ assign, track, or close claims automatically.
 
 **Workflow:**
 
-Manual input / copy-paste case file / converted PDF or DOCX Markdown
+Manual input / copy-paste case file
 → structured intake review by the operator
 → routing packet generated in chat output
 → user or Claude Code saves packet as a Markdown file (optional)
@@ -253,17 +253,6 @@ claim-management system.
 Without a roster, the operator recommends units and vendors only, not named handlers. See `reference/output-template.md` — Optional Assignment Breakdown.
 
 If a demo roster is provided, the routing packet can optionally be expanded into a demo assignment breakdown and ledger entry — see `reference/assignment-capacity-roster.md` and `outputs/assignment-ledger-template.md`.
-
-## Document-to-Markdown Intake Option
-
-If the claim information starts as a PDF, DOCX, TXT file, email, estimate, police report, prior vendor report, or claim note, first use `tools/document-to-markdown.md` to convert or summarize the material into clean Markdown and a structured intake draft.
-
-The document-to-Markdown utility does not route the claim. It prepares the intake. The routing operator makes the next-action decision after the structured intake is ready.
-
-1. Convert the source claim document into Markdown.
-2. Review sensitive claim details against `reference/pii-redaction-guide.md`.
-3. Remove or replace unnecessary personal identifiers.
-4. Submit the cleaned claim facts into the operator.
 
 ## What This Operator Handles
 
@@ -327,11 +316,4 @@ AutoClaimsNextActionRoutingOperator/
 │   ├── assignment-ledger-template.md  Demo ledger tracker for routing packet entries
 │   └── AC-DOCX-TEST-2026-021-routing-packet.md
 │                                       Saved example routing packet
-│
-├── tools/
-│   └── document-to-markdown.md        Optional utility guide for converting source documents into Markdown intake format
-│
-└── intake/
-    ├── intake.html                    Optional browser-based intake form
-    └── README.md                      Intake folder documentation
 ```

@@ -2,8 +2,6 @@
 
 This guide explains how to prepare source materials before submitting a referral to the Auto Claims Next-Action Routing Operator.
 
-For document preparation from PDF, DOCX, TXT, email, estimate, police report, or prior vendor report, use `tools/document-to-markdown.md` before completing the structured intake form.
-
 ---
 
 ## What This Operator Is and Is Not
