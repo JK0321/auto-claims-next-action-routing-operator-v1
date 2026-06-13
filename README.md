@@ -104,7 +104,7 @@ Each routing packet includes a routing confidence level — High, Medium, or Low
    | **Workload Status** | 13/15 — Available |
    | **Modifier Flags** | POLICE REPORT MISSING / UNAVAILABLE |
 
-   Decision 6 (Material Damage / Appraisal Unit) applies because coverage is confirmed, liability is uncontested, no injury or SIU indicators are present, and the primary remaining work is obtaining the damage estimate. The claim does not reach Decision 8 (Standard Desk Auto Unit) because appraisal coordination is still outstanding. The full output uses the nine-section format defined in `reference/output-template.md`.
+   Decision 6 (Material Damage / Appraisal Unit) applies because coverage is confirmed, liability is uncontested, no injury or SIU indicators are present, and the primary remaining work is obtaining the damage estimate. The claim does not reach Decision 8 (Standard Desk Auto Unit) because appraisal coordination is still outstanding. The full output uses the eight-section format defined in `reference/output-template.md`.
 
 3. Paste the completed form into the chat.
 4. Ask Claude to run the Auto Claims Next-Action Routing Operator.
@@ -183,7 +183,7 @@ When the demo capacity roster is used, workload status should use the numeric fo
 
 The operator returns a structured Markdown routing packet. See `reference/output-template.md` for the full format specification.
 
-Each packet opens with a header block — claim number, date of loss, loss location, claim type, insured and claimant names — followed by nine numbered sections:
+Each packet opens with a header block — claim number, date of loss, loss location, claim type, insured and claimant names — followed by eight numbered sections:
 
 | Section | Content |
 |---|---|
@@ -191,11 +191,10 @@ Each packet opens with a header block — claim number, date of loss, loss locat
 | **2. Loss Summary** | One to two sentence narrative of the loss |
 | **3. Routing Decision** | Primary route and routing confidence in a table; confidence reason below |
 | **4. Decision Hierarchy Applied** | Which decision step triggered and why |
-| **5. Sourcing, Governance, and Capacity** | Sourcing model, governance action, workload status, and capacity action — table format |
-| **6. Modifier Flags** | Applicable modifier flags as a bullet list |
-| **7. Missing Information / Constraints** | Non-blocking gaps as a bullet list |
-| **8. Next Action** | Specific operational next step |
-| **9. Draft Routing Note** | Short note to the receiving unit |
+| **5. Sourcing, Governance, Capacity, and Modifier Flags** | Sourcing model, governance action, workload status, capacity action, and modifier flag bullets — combined section |
+| **6. Missing Information / Constraints** | Non-blocking gaps as a bullet list |
+| **7. Next Action** | Specific operational next step |
+| **8. Draft Routing Note** | Short note to the receiving unit |
 
 Key results are presented in tables:
 
@@ -205,6 +204,7 @@ Key results are presented in tables:
 - **Governance Action** — Section 5
 - **Assignment Resource** — Section 5
 - **Workload Status** — Section 5
+- **Modifier Flags** — Section 5
 
 ## Example Quick Test
 

@@ -6,7 +6,7 @@ This file contains the full output format for the Auto Claims Next-Action Routin
 
 ## Part 1 — Routing Packet Output
 
-The operator returns a structured Markdown routing packet on every in-scope referral with sufficient information. The packet opens with a header block identifying the claim, followed by eight numbered sections. Key results are called out with bold labels. Tables are used for snapshot-style and structured fields.
+The operator returns a structured Markdown routing packet on every in-scope referral with sufficient information. The packet opens with a header block identifying the claim, followed by eight numbered sections. Key results are called out with bold labels. Tables are used for snapshot-style and structured fields. Modifier flags appear in Section 5 alongside sourcing, governance, and capacity.
 
 ---
 
@@ -58,7 +58,7 @@ The operator returns a structured Markdown routing packet on every in-scope refe
 
 ---
 
-## 5. Sourcing, Governance, and Capacity
+## 5. Sourcing, Governance, Capacity, and Modifier Flags
 
 | Field | Value |
 |---|---|
@@ -69,27 +69,25 @@ The operator returns a structured Markdown routing packet on every in-scope refe
 | **Capacity Action** | [Direct assignment allowed / Reroute to alternate resource / Hold / Supervisor queue] |
 | **Source Documents Reviewed** | [Documents reviewed — or None.] |
 
----
-
-## 6. Modifier Flags
+**Modifier Flags:**
 
 - [Flag — or: None.]
 
 ---
 
-## 7. Missing Information / Constraints
+## 6. Missing Information / Constraints
 
 - [Non-blocking gap and whether it is blocking or non-blocking — or: None.]
 
 ---
 
-## 8. Next Action
+## 7. Next Action
 
 [Specific operational next step. State what must happen first, in what order, and who is responsible for each step if multiple tasks apply.]
 
 ---
 
-## 9. Draft Routing Note
+## 8. Draft Routing Note
 
 **TO:** [Receiving unit — desk adjuster, supervisor, SIU, appraisal unit, field unit, vendor coordinator, or assignment queue]
 
