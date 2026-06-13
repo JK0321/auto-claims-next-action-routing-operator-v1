@@ -1,6 +1,6 @@
 # Auto Claims Next-Action Routing Operator
 
-## Project Synopsis
+## Project Overview
 
 The Auto Claims Next-Action Routing Operator is a post-FNOL (after the initial claim is filed and set up) folder-based Claude operator that reviews auto accident claim referrals and produces one primary next-action routing packet.
 
