@@ -43,15 +43,12 @@ The operator returns a structured Markdown routing packet on every in-scope refe
 
 ## 3. Routing Decision
 
-**Primary Route:** [ONE PRIMARY ROUTE IN CAPITAL LETTERS]
-
-**Routing Confidence:** [High / Medium / Low]
+| Field | Value |
+|---|---|
+| **Primary Route** | [ONE PRIMARY ROUTE IN CAPITAL LETTERS] |
+| **Routing Confidence** | [High / Medium / Low] |
 
 [One to two sentences explaining why this confidence level was selected. Reference the specific intake facts that support or limit confidence.]
-
-**Modifiers / Task Flags:**
-
-- [Flag — or: None.]
 
 ---
 
@@ -63,36 +60,39 @@ The operator returns a structured Markdown routing packet on every in-scope refe
 
 ## 5. Sourcing, Governance, and Capacity
 
-**Sourcing Model:** [One sourcing model]
-
-**Governance Action:** [GOVERNANCE ACTION IN CAPITAL LETTERS]
-
-**Capacity Status:** [e.g., 13/15 — Available or 15/15 — At Capacity]
-
 | Field | Value |
 |---|---|
+| **Sourcing Model** | [One sourcing model] |
+| **Governance Action** | [GOVERNANCE ACTION IN CAPITAL LETTERS] |
 | **Assignment Resource** | [Resource ID or resource type — e.g., DESK-AUTO-01 or Internal Desk] |
-| **Workload Status** | [Numeric or text-based workload status] |
+| **Workload Status** | [Numeric or text-based workload status — e.g., 13/15 — Available] |
 | **Capacity Action** | [Direct assignment allowed / Reroute to alternate resource / Hold / Supervisor queue] |
 | **Source Documents Reviewed** | [Documents reviewed — or None.] |
 
 ---
 
-## 6. Missing Information / Constraints
+## 6. Modifier Flags
 
-[List each non-blocking gap, one per line. Note whether each item is blocking or non-blocking. If none, write: None.]
-
----
-
-## 7. Next Action
-
-**Next Action:** [Specific operational next step. State what must happen first, in what order, and who is responsible for each step if multiple tasks apply.]
+- [Flag — or: None.]
 
 ---
 
-## 8. Draft Routing Note
+## 7. Missing Information / Constraints
 
-**TO:** [Receiving unit — desk adjuster, supervisor, SIU, appraisal unit, field unit, vendor coordinator, or assignment queue]  
+- [Non-blocking gap and whether it is blocking or non-blocking — or: None.]
+
+---
+
+## 8. Next Action
+
+[Specific operational next step. State what must happen first, in what order, and who is responsible for each step if multiple tasks apply.]
+
+---
+
+## 9. Draft Routing Note
+
+**TO:** [Receiving unit — desk adjuster, supervisor, SIU, appraisal unit, field unit, vendor coordinator, or assignment queue]
+
 **RE:** [Claim ID] — [Governance Action summary]
 
 [Short routing note. Include claim ID, primary route, key facts driving the route, outstanding tasks, and any constraints the receiving unit must act on before closing the routing review.]

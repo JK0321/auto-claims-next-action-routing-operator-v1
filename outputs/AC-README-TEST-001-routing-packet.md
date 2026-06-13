@@ -27,15 +27,12 @@ Insured Michael Turner rear-ended claimant Rachel Adams at a stoplight in Fort C
 
 ## 3. Routing Decision
 
-**Primary Route:** MATERIAL DAMAGE / APPRAISAL UNIT
-
-**Routing Confidence:** High
+| Field | Value |
+|---|---|
+| **Primary Route** | MATERIAL DAMAGE / APPRAISAL UNIT |
+| **Routing Confidence** | High |
 
 Coverage is confirmed active for the date of loss. Liability is uncontested — clear rear-end impact at a stoplight, no dispute noted. No injury claim, attorney representation, SIU indicators, or field inspection need is present. The missing police report and pending damage estimate are both non-blocking for routing to the material damage / appraisal unit.
-
-**Modifiers / Task Flags:**
-
-- POLICE REPORT MISSING / UNAVAILABLE
 
 ---
 
@@ -47,14 +44,10 @@ Coverage is confirmed and no coverage question is present — Decision 3 does no
 
 ## 5. Sourcing, Governance, and Capacity
 
-**Sourcing Model:** INTERNAL DESK
-
-**Governance Action:** DIRECT ASSIGNMENT
-
-**Capacity Status:** 13/15 — Available
-
 | Field | Value |
 |---|---|
+| **Sourcing Model** | INTERNAL DESK |
+| **Governance Action** | DIRECT ASSIGNMENT |
 | **Assignment Resource** | DESK-AUTO-01 |
 | **Workload Status** | 13/15 — Available |
 | **Capacity Action** | Direct assignment allowed. |
@@ -62,23 +55,30 @@ Coverage is confirmed and no coverage question is present — Decision 3 does no
 
 ---
 
-## 6. Missing Information / Constraints
+## 6. Modifier Flags
 
-- Policy number / reference not provided. **Non-blocking:** coverage is confirmed active for the date of loss and no coverage question is present.
-- Damage estimate not yet received. **Non-blocking:** appraisal coordination is the purpose of this routing step.
-- Police report not available. **Non-blocking** for routing; receiving unit should confirm whether it is required for the appraisal workflow.
+- POLICE REPORT MISSING / UNAVAILABLE
 
 ---
 
-## 7. Next Action
+## 7. Missing Information / Constraints
 
-**Next Action:** Assign to DESK-AUTO-01 for appraisal coordination. Use available vehicle photos to initiate desk appraisal review. Request damage estimate from claimant's repair shop or coordinate direct inspection as appropriate. Confirm whether police report is required for the appraisal workflow before closing the routing review.
+- Policy number / reference not provided. Non-blocking: coverage is confirmed active for the date of loss and no coverage question is present.
+- Damage estimate not yet received. Non-blocking: appraisal coordination is the purpose of this routing step.
+- Police report not available. Non-blocking for routing; receiving unit should confirm whether it is required for the appraisal workflow.
 
 ---
 
-## 8. Draft Routing Note
+## 8. Next Action
 
-**TO:** Material Damage / Appraisal Unit — Internal Desk (DESK-AUTO-01)  
+Assign to DESK-AUTO-01 for appraisal coordination. Use available vehicle photos to initiate desk appraisal review. Request damage estimate from claimant's repair shop or coordinate direct inspection as appropriate. Confirm whether police report is required for the appraisal workflow before closing the routing review.
+
+---
+
+## 9. Draft Routing Note
+
+**TO:** Material Damage / Appraisal Unit — Internal Desk (DESK-AUTO-01)
+
 **RE:** AC-README-TEST-001 — Direct Assignment
 
 Clear rear-end loss. Insured Michael Turner rear-ended claimant Rachel Adams at a stoplight in Fort Collins, CO on 2026-06-01. Coverage confirmed active for date of loss. No injuries, no attorney, no SIU indicators. Minor rear bumper damage; vehicle photos in file; estimate not yet received. Police report unavailable — confirm whether required for the appraisal workflow. Workload confirmed within target. Direct assignment authorized.
