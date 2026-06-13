@@ -6,6 +6,10 @@ The Auto Claims Next-Action Routing Operator is a post-FNOL (after the initial c
 
 It routes claims across eight ordered handling paths — Out of Scope / Misrouted, Return for Additional Information, Coverage / Supervisor Review, SIU Referral, Complex / Major Case Auto Unit, Material Damage / Appraisal Unit, Field Adjuster / Field Investigation, and Standard Desk Auto Unit — applied in order and stopping at the first applicable match. The operator also adds sourcing guidance, workload status, governance action, modifier flags, missing information, reasoning, and a draft routing note for claims coordinators and adjusters.
 
+## Video Walkthrough
+
+[Watch the operator demo on YouTube](https://www.youtube.com/watch?v=vk7epydYaaw)
+
 ## Workflow Overview
 
 The operator runs in eight stages. During Stage 3, Routing Decision, the operator applies the Decision Hierarchy to select one primary route.
