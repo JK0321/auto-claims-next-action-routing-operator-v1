@@ -92,7 +92,17 @@ Each routing packet includes a routing confidence level — High, Medium, or Low
    REQUESTED ACTION: Route for next handling
    ```
 
-   Expected output: `PRIMARY ROUTE: STANDARD DESK AUTO UNIT` / `SOURCING MODEL: INTERNAL DESK` / `ASSIGNMENT RESOURCE: DESK-AUTO-01` / `WORKLOAD STATUS: 13/15 — Available` / `CAPACITY ACTION: Direct assignment allowed` / `GOVERNANCE ACTION: DIRECT ASSIGNMENT` / `ROUTING CONFIDENCE: High`
+   Expected routing results:
+
+   **Primary Route:** MATERIAL DAMAGE / APPRAISAL UNIT  
+   **Sourcing Model:** INTERNAL DESK  
+   **Assignment Resource:** DESK-AUTO-01  
+   **Workload Status:** 13/15 — Available  
+   **Governance Action:** DIRECT ASSIGNMENT  
+   **Routing Confidence:** High  
+   **Modifiers:** POLICE REPORT MISSING / UNAVAILABLE
+
+   Decision 6 (Material Damage / Appraisal Unit) applies because coverage is confirmed, liability is uncontested, no injury or SIU indicators are present, and the primary remaining work is obtaining the damage estimate. The claim does not reach Decision 8 (Standard Desk Auto Unit) because appraisal coordination is still outstanding. The full output uses the eight-section format defined in `reference/output-template.md`.
 
 3. Paste the completed form into the chat.
 4. Ask Claude to run the Auto Claims Next-Action Routing Operator.
@@ -128,7 +138,8 @@ This table summarizes representative auto claim routing scenarios. It is not an 
 
 | Condition | Primary Route | Sourcing Model | Governance Action |
 |---|---|---|---|
-| Minor vehicle damage, clear liability, no injury claimed | Standard Desk Auto Unit | Internal Desk | Direct Assignment |
+| Minor vehicle damage, estimate not yet received, clear liability, no injury claimed | Material Damage / Appraisal Unit | Internal Desk | Direct Assignment |
+| Minor vehicle damage, estimate received, clear liability, no injury claimed | Standard Desk Auto Unit | Internal Desk | Direct Assignment |
 | Liability disputed, no injury claimed, witness or statement follow-up needed | Field Adjuster / Field Investigation | Internal Desk or Field Support | Direct Assignment or Supervisor Review |
 | Injury claimed, liability disputed, police report missing | Complex / Major Case Auto Unit | Internal Desk or Approved Vendor | Supervisor Approval Required |
 | Coverage status unclear, policy issue, excluded driver, or questionable coverage facts | Coverage / Supervisor Review | Internal Desk | Supervisor Approval Required |
@@ -168,49 +179,29 @@ When the demo capacity roster is used, workload status should use the numeric fo
 
 ## Required Output Format
 
-```text
-PRIMARY ROUTE:
-[One primary route]
+The operator returns a structured Markdown routing packet. See `reference/output-template.md` for the full format specification.
 
-SOURCING MODEL:
-[One sourcing model]
+Each packet opens with a header block — claim number, date of loss, loss location, claim type, insured and claimant names — followed by eight numbered sections:
 
-ASSIGNMENT RESOURCE:
-[Resource ID or resource type — e.g., DESK-AUTO-01 or Internal Desk]
+| Section | Content |
+|---|---|
+| **1. Claim Snapshot** | Claim identifiers, coverage status, and liability status |
+| **2. Loss Summary** | One to two sentence narrative of the loss |
+| **3. Routing Decision** | Primary route, confidence level, and modifier flags |
+| **4. Decision Hierarchy Applied** | Which decision step triggered and why |
+| **5. Sourcing, Governance, and Capacity** | Sourcing model, governance action, and workload status |
+| **6. Missing Information / Constraints** | Non-blocking gaps noted |
+| **7. Next Action** | Specific operational next step |
+| **8. Draft Routing Note** | Short note to the receiving unit |
 
-WORKLOAD STATUS:
-[Current load / max load — Available or At Capacity — e.g., 13/15 — Available or 15/15 — At Capacity]
+Key results appear as bold labels:
 
-CAPACITY ACTION:
-[Direct assignment allowed / Reroute to alternate resource / Hold / Supervisor queue]
-
-GOVERNANCE ACTION:
-[DIRECT ASSIGNMENT / ROUTE TO ALTERNATE QUEUE / HOLD IN ASSIGNMENT REVIEW QUEUE / SUPERVISOR APPROVAL REQUIRED / RETURN TO REFERRING PARTY]
-
-MODIFIERS / TASK FLAGS:
-[List applicable flags — or None.]
-
-ROUTING CONFIDENCE:
-[High / Medium / Low]
-
-CONFIDENCE REASON:
-[Brief explanation of why this confidence level was selected.]
-
-SOURCE DOCUMENTS REVIEWED:
-[List documents reviewed — or None.]
-
-MISSING INFORMATION:
-[Specific missing facts — or None.]
-
-REASON:
-[Why this route, sourcing model, and governance action were selected]
-
-NEXT ACTION:
-[Specific operational next step]
-
-DRAFT ROUTING NOTE:
-[Short routing note to the receiving unit, supervisor, SIU, appraisal unit, field unit, vendor coordinator, or assignment queue]
-```
+- **Primary Route:** — Section 3
+- **Routing Confidence:** — Section 3
+- **Sourcing Model:** — Section 5
+- **Governance Action:** — Section 5
+- **Capacity Status:** — Section 5
+- **Next Action:** — Section 7
 
 ## Example Quick Test
 
